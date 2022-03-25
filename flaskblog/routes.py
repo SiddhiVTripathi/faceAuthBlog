@@ -156,6 +156,8 @@ def user_posts(username):
         .paginate(page=page, per_page=5)
     return render_template('user_posts.html', posts=posts, user=user)
 
+# @app.route("/user/<string:username>/addFace")
+# def addFace(username):
 
 def send_reset_email(user):
     token = user.get_reset_token()
